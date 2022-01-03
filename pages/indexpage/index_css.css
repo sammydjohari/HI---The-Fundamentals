@@ -1,0 +1,263 @@
+@font-face {
+    font-family: introFont;
+    src: url("../../assets/RetroGaming.ttf");
+  } 
+
+  body,
+  html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+  }
+  
+  #containerRuta {
+    width: 100%;
+    height: 100%;
+    position: center;
+  }
+  
+  svg {
+    display: block;
+    margin: 2em auto 0;
+    width: 50%;
+    height: 100%;
+    position: center;
+  }
+  
+  #ritadLogo.active {
+    stroke: black;
+    stroke-width: 1;
+    stroke-dasharray: 1352;
+    stroke-dashoffset: 1352;
+    animation: animeLogo 5s forwards ease-in;
+  }
+  
+  @keyframes animeLogo {
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  nav {
+    height: 100px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    justify-content: space-between;
+  }
+  
+  nav img {
+    width: auto;
+    height: 40px;
+    padding: 30px;
+    align-self: center;
+  }
+  
+  nav a:hover {
+    cursor: pointer;
+  }
+  
+  #leftNav {
+    width: auto;
+    text-decoration: none;
+    color: black;
+    font-weight: normal;
+    align-self: center;
+  }
+  #leftNav.active {
+    position: absolute;
+    animation: challengeBtn 2s infinite ease-in-out;
+    animation-delay: 5s;
+    margin-left: 40%;
+  }
+  
+  @keyframes challengeBtn {
+    10%,
+    90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+  
+    20%,
+    80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%,
+    50%,
+    70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%,
+    60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
+  
+  div a {
+    text-decoration: none;
+    color: black;
+    padding: 0.5rem;
+    margin-right: 100px;
+  }
+  
+  #rightNav {
+    width: auto;
+    text-decoration: none;
+    color: black;
+    font-weight: normal;
+    align-self: center;
+  }
+  
+  nav .icon {
+    display: none;
+  }
+  
+  #opRuta {
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    position: fixed;
+    background-color: black;
+    top: 0%;
+    left: 0%;
+  }
+  
+  #popupRuta {
+    height: 500px;
+    width: 500px;
+    z-index: 1;
+    background-color: #118207;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 10px black;
+    border-radius: 25%;
+    shape-outside: margin-box;
+  }
+  
+  #textPopupruta {
+    font-family: introFont;
+    font-weight: lighter;
+    font-size: 20px;
+    padding: 1px;
+    margin: auto;
+    width: 70%;
+    line-height: 0.95;
+    text-align: center;
+    color: whitesmoke;
+  }
+  
+  #playButton {
+    height: 30px;
+    font-family: introFont;
+    margin-top: 10px;
+    border-radius: 25%;
+    background-color: white;
+    border: none;
+    opacity: 0.7;
+    transition: background-color, opacity, 0.2s ease-out;
+    transition-delay: 0.2s;
+    color: black;
+    font-size: 16px;
+  
+    align-items: center;
+    text-align: center;
+  }
+  
+  #playButton:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  
+  #playButton:hover,
+  :focus {
+    transition: background-color, opacity, 0.2s 0s linear;
+    background-color: whitesmoke;
+    transition-delay: 0s;
+    opacity: 1;
+    transform-origin: center left;
+    transition-property: transform;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+  
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    height: fit-content;
+  }
+  
+  .bar {
+    background-color: black;
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease ease-in-out;
+    transition: all 0.3s ease ease-in-out;
+  }
+  
+  @media (max-width: 1100px) {
+    .hamburger {
+      display: block;
+      position: absolute;
+      right: 4rem;
+    }
+  
+    .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .hamburger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+  
+    .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  
+    nav {
+      mask-origin: 0;
+      display: flex;
+      
+    }
+
+    #rightNav {
+      display: flex;
+      position: fixed;
+      left: -100%;
+      top: 70px; 
+      gap: 0; 
+      flex-direction: column;
+      background-color: whitesmoke;
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+    }
+  
+    #rightNav.a {
+      margin: 16px 0;
+    } 
+  
+    #rightNav.active {
+      display: flex;
+      left: 0;
+      justify-content: center;
+      flex-direction: column;
+    } 
+  }
+  

@@ -1,0 +1,84 @@
+body,html {
+    height: 100%;
+    width: 100%;
+
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content:center;
+}
+
+#container {
+    width: 70%;
+    margin: 100px auto 20px auto;
+    border-radius: 5px;
+    padding: 50px;
+    background-color: #f2f2f2;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    line-height: 40px;
+    border-radius: 10%;
+  }
+  
+
+input[type=text], select, textarea {
+    width: 100%; 
+    padding: 12px;  
+    border: 1px solid #ccc;  
+    box-sizing: border-box; 
+    display: block;
+    
+  }
+  
+  input[type=text], select {
+    width: 150px;
+  }
+  
+
+  /* submit btn */
+  input[type=submit] {
+    height: 30px;
+    font-family: introFont;
+    margin: 10px;
+    margin-left: 30px;
+    border-radius: 25%;
+    background-color: #118207;
+    border: none;
+    opacity: 0.7;
+    transition: background-color, opacity, 0.2s ease-out;
+    transition-delay: 0.2s;
+    color: whitesmoke;
+    font-size: 16px;
+    align-items:flex-start;
+    text-align: center;
+  }
+  
+  /* hover over submit btn */
+  input[type=submit]:hover {
+    transition: background-color, opacity, 0.2s 0s linear;
+    background-color: whitesmoke;
+    color:#118207 ;
+    transition-delay: 0s;
+    opacity: 1;
+    transform-origin: center left;
+    transition-property: transform;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
+  input[type=submit]:active {
+    box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+  
+
+
+  
