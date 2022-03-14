@@ -1,8 +1,8 @@
-# RecipeBank
+# The Fundamentals
 
 ---
 
-Hyper Island - The Fundamentals
+Hyper Island - 
 
 ### :open_file_folder: The Brief:
 
